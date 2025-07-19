@@ -1,6 +1,6 @@
 {
   "name": "help-command",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Настраиваемая команда help для отображения списка команд.",
   "main": "index.js",
   "author": "I_Sahorok",
@@ -11,25 +11,14 @@
     ],
     "icon": "square-terminal",
     "settings": {
-      "showHeader": {
-        "type": "boolean",
-        "label": "Показывать заголовок",
-        "description": "Включает или выключает заголовок перед списком команд.",
-        "default": true
-      },
-      "header": {
-        "type": "string",
-        "label": "Текст заголовка",
-        "description": "Сообщение, которое будет отображаться, если заголовок включен.",
-        "default": "Доступные команды:"
-      },
       "commandList": {
         "type": "string[]",
         "label": "Список команд",
-        "description": "Каждая строка - отдельное сообщение. Опишите здесь ваши команды.",
+        "description": "Каждая строка будет отправлена как отдельное сообщение.",
         "default": [
-          "Для игроков: @stats, @time",
-          "Для админов: @ban, @warn, @checkdeath"
+          "Доступные команды:",
+          "Для игроков: @dev, @time",
+          "Для админов: @ban, @warn, @setgroup"
         ]
       }
     }
