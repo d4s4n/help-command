@@ -16,15 +16,12 @@ async function onLoad(bot, options) {
                 permissions: PERMISSION_NAME,
                 owner: PLUGIN_OWNER_ID,
                 cooldown: 10,
-                allowedChatTypes: ['clan', 'private', 'chat']
+                allowedChatTypes: ['clan', 'private', 'chat'],
+                args: []
             });
         }
 
         async handler(bot, typeChat, user) {
-            if (settings.showHeader) {
-                bot.api.sendMessage(typeChat, settings.header, user.username);
-            }
-
             for (const line of settings.commandList) {
                 bot.api.sendMessage(typeChat, line, user.username);
             }
